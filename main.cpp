@@ -26,7 +26,7 @@
 // Global variables for positions
 glm::vec3 spherePos(-1.2f, 0.0f, -5.0f);
 glm::vec3 cylinderPos(1.2f, -3.0f, -5.5f);
-const GLuint WIDTH = 800, HEIGHT = 600; // Global variables for width and height of window
+const GLuint WIDTH = 2000, HEIGHT = 2000; // Global variables for width and height of window
 
 // Function prototype
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -42,7 +42,19 @@ glm::vec3 lightPos(1.0f, 1.0f, -2.0f); // Sets light position
 GLfloat deltaTime = 0.0f; // Initialize deltaTime for camera movement
 GLfloat lastFrame = 0.0f; // Initialize lastFrame for camera movement
 
+void printControls() {
+    std::cout << "Controls for 3D Graphics Program:\n"
+              << "--------------------------------\n"
+              << "Arrow Keys: Move camera (Up/Down/Left/Right)\n"
+              << "Shift + Arrow Keys: Accelerate camera movement\n"
+              << "Ctrl + Arrow Keys: Adjust camera pitch (Ctrl+Up/Down) and yaw (Ctrl+Left/Right)\n"
+              << "R Key: Reset camera to initial position\n"
+              << "Esc Key: Close the program\n"
+              << std::endl;
+}
+
 int main() {
+    printControls();
     // Init GLFW
     glfwInit(); // Initialize GLFW
     // Set all the required options for GLFW
@@ -309,6 +321,7 @@ int main() {
 
 }
 
+
 // Method for key input
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
@@ -362,3 +375,4 @@ void do_movement() {
         camera.ResetCamera(); // Reset camera with callback
     }
 }
+
