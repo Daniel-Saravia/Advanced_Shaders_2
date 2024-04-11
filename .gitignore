@@ -1,0 +1,29 @@
+# Object files
+*.o
+*.obj
+
+# Static and shared libraries
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Executable files
+*.exe
+*.out
+*.app
+
+# Build directories
+build/
+bin/
+obj/
+Release/
+Debug/
+
+# Other files that should be ignored
+*.log
+*.tlog
+*.log
+*.ilk
+*.pdb
