@@ -1,6 +1,8 @@
 // Daniel Saravia
 // g++ -o myProgram main.cpp -lglfw -lGLEW -lGL -lSOIL -lassimp -std=c++11
+#define STB_IMAGE_IMPLEMENTATION
 
+#include "stb_image.h"
 #include <iostream>  // iostream include
 
 // GLEW
@@ -52,6 +54,8 @@ void printControls() {
               << "Esc Key: Close the program\n"
               << std::endl;
 }
+
+
 
 int main() {
     printControls();
